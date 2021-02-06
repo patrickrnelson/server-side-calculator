@@ -33,12 +33,30 @@ function newCalc(input) {
 
 */
 
+// get the inputs
+// do the calculation
+// add the answer to the object
+// push the object to the array
+
 app.post('/inputs', (req, res) => {
+  // inputs
   let calculation = req.body.calcToAdd;
+  // crunch the numbers
+  let answer = calculations.crunchNumbers(calculation);
+  // console.log('Testing the calc', answer);
+  // add the answer to the object
+  calculation = {
+    numOne: calculation.numOne,
+    numTwo: calculation.numTwo,
+    operator: calculation.operator,
+    answer: answer,
+  };
+  // push the object to the array
   newCalc(calculation);
-  console.log('calculations array', calculations.array);
+  console.log('New array', calculations.array);
   res.sendStatus(200); // means OK!
-  console.log('testing crunchNumbers', calculations.crunchNumbers(calculation));
 });
 
-app.get('/inputs', (req, res) => {});
+app.get('/inputs', (req, res) => {
+  res.send(calculations.array);
+});

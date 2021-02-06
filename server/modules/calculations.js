@@ -6,19 +6,19 @@ function crunchNumbers(x) {
   let numberOne = Number(x.numOne);
   let numberTwo = Number(x.numTwo);
   if (x.operator === 'addBtn') {
-    console.log('Addition');
+    // console.log('Addition');
     answer = numberOne + numberTwo;
     return answer;
   } else if (x.operator === 'subtractBtn') {
-    console.log('Subtraction');
+    // console.log('Subtraction');
     answer = numberOne - numberTwo;
     return answer;
   } else if (x.operator === 'divideBtn') {
-    console.log('Division');
+    // console.log('Division');
     answer = numberOne / numberTwo;
     return answer;
   } else if (x.operator === 'multiplyBtn') {
-    console.log('Multiplication');
+    // console.log('Multiplication');
     answer = numberOne * numberTwo;
     return answer;
   }
