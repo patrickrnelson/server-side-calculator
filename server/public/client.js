@@ -30,27 +30,31 @@ function onSubmit(evt) {
   };
   console.log(valuesObj);
 
-  function addNewCalculation() {
-    // Important....
-    $.ajax({
-      method: 'POST',
-      url: '/inputs',
-      data: {
-        calcToAdd: valuesObj,
-      },
-    })
-      // ...ajax...
-      .then(function (response) {
-        console.log('successful POST', response);
+  if (numOne !== '' && numTwo !== '' && operator !== '') {
+    function addNewCalculation() {
+      // Important....
+      $.ajax({
+        method: 'POST',
+        url: '/inputs',
+        data: {
+          calcToAdd: valuesObj,
+        },
       })
-      // ...pieces.
-      .catch(function (error) {
-        console.log('wah wah', error);
-      });
+        // ...ajax...
+        .then(function (response) {
+          console.log('successful POST', response);
+        })
+        // ...pieces.
+        .catch(function (error) {
+          console.log('wah wah', error);
+        });
+    }
+    addNewCalculation();
   }
-  addNewCalculation();
 }
 
 function onClear() {
-  console.log('onClear');
+  operator = '';
+  $('#numOneInput').val('');
+  $('#numTwoInput').val('');
 }
