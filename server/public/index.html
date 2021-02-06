@@ -11,5 +11,24 @@
   </head>
   <body>
     <h1>Weekend Challenge Two: Calculator</h1>
+
+    <div id="inputDiv">
+      <form>
+        <input type="number" min="0" id="numOneInput" />
+        <input type="button" value="+" id="addBtn" />
+        <input type="button" value="-" id="subtractBtn" />
+        <input type="button" value="/" id="divideBtn" />
+        <input type="button" value="*" id="multiplyBtn" />
+        <input type="number" min="0" id="numTwoInput" />
+        <button type="submit" id="submitBtn">=</button>
+      </form>
+      <button id="clearBtn">C</button>
+    </div>
+
+    <h3 id="resultNumber">250</h3>
+
+    <ul id="listOfResults"></ul>
+    <li>12 + 10 = 22</li>
+    <li>100 + 65 = 165</li>
   </body>
 </html>

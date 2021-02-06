@@ -2,12 +2,12 @@
 
 ### Front-end
 
-- [ ] Build the Form
-  - [ ] 1 number input
-  - [ ] Operator buttons (4 total)\
-  - [ ] 1 number input
-  - [ ] Equals button
-  - [ ] Clear button (clears the inputs)
+- [x] Build the Form (HTML)
+  - [x] 1 number input
+  - [x] Operator buttons (4 total)\
+  - [x] 1 number input
+  - [x] Equals button
+  - [x] Clear button (clears the inputs)
 - [ ] put the inputs into an object
 - [ ] send the object to the server (POST)
 - [ ] _Keep a historical record of all operations and solutions and append that record to the DOM_
