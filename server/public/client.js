@@ -67,19 +67,22 @@ function getCalculations() {
 
 function appendToDom(incomingArray) {
   console.log(incomingArray);
+  // empty the DOM
   $('#listOfResults').empty();
   $('#resultNumber').empty();
+  // Find the answer of the most recent calculation
+  let lastItem = incomingArray[incomingArray.length - 1];
+  let lastAnswer = lastItem.answer;
+  // append the answer to the DOM
+  $('#resultNumber').append(`
+      <h3>${lastAnswer}</h3>`);
+  // loop through the array of calculations
   for (let item of incomingArray) {
+    // Append all of the calculations to the DOM
     $('#listOfResults').append(`
       <li>
       ${item.numOne} + ${item.numTwo} = ${item.answer}
       </li>`);
-  }
-  for (i = 0; i < incomingArray.length; i++) {
-    let lastItem = incomingArray[incomingArray.length - 1];
-    let lastAnswer = lastItem.Answer;
-    $('#resultNumber').append(`
-      <h3>${lastAnswer}</h3>`);
   }
 }
 
