@@ -8,7 +8,7 @@
   - [x] 1 number input
   - [x] Equals button
   - [x] Clear button (clears the inputs)
-- [ ] put the inputs into an object
+- [x] put the inputs into an object
 - [ ] send the object to the server (POST)
 - [ ] _Keep a historical record of all operations and solutions and append that record to the DOM_
 
