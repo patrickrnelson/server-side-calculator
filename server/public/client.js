@@ -24,8 +24,8 @@ function onSubmit(evt) {
   let numTwo = $('#numTwoInput').val();
 
   let valuesObj = {
-    numOne: numOne,
-    numTwo: numTwo,
+    numOne: Number(numOne),
+    numTwo: Number(numTwo),
     operator: operator,
   };
   console.log(valuesObj);

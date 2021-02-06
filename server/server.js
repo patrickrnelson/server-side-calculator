@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const calculations = require('./modules/calculations');
 
 const app = express();
 const PORT = 5000;
@@ -14,11 +15,8 @@ app.listen(PORT, () => {
   console.log('listening on port', PORT);
 });
 
-// Set up an array to store the input objects from client
-let calculations = [];
-
 function newCalc(input) {
-  calculations.push(input);
+  calculations.array.push(input);
   return true;
 }
 
@@ -38,6 +36,9 @@ function newCalc(input) {
 app.post('/inputs', (req, res) => {
   let calculation = req.body.calcToAdd;
   newCalc(calculation);
-  console.log('calculations array', calculations);
+  console.log('calculations array', calculations.array);
   res.sendStatus(200); // means OK!
+  console.log('testing crunchNumbers', calculations.crunchNumbers(calculation));
 });
+
+app.get('/inputs', (req, res) => {});
