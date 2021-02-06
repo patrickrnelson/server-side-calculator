@@ -29,6 +29,26 @@ function onSubmit(evt) {
     operator: operator,
   };
   console.log(valuesObj);
+
+  function addNewCalculation() {
+    // Important....
+    $.ajax({
+      method: 'POST',
+      url: '/inputs',
+      data: {
+        calcToAdd: valuesObj,
+      },
+    })
+      // ...ajax...
+      .then(function (response) {
+        console.log('successful POST', response);
+      })
+      // ...pieces.
+      .catch(function (error) {
+        console.log('wah wah', error);
+      });
+  }
+  addNewCalculation();
 }
 
 function onClear() {

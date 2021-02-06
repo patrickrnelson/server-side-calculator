@@ -9,11 +9,16 @@
   - [x] Equals button
   - [x] Clear button (clears the inputs)
 - [x] put the inputs into an object
-- [ ] send the object to the server (POST)
+- [x] send the object to the server (ajax POST)
+- [ ] get the array from the server (ajax GET)
 - [ ] _Keep a historical record of all operations and solutions and append that record to the DOM_
 
 ### Server side
 
+- [x] Set up a POST (app.post)
+- [x] Test with Postman
+- [ ] Set up an app.get
+  - [ ] Test
 - [ ] Compute the numbers from the object
 - [ ] Once the computation is done, send back OK
 - [ ] Do a GET request after the POST to get the actual calculation.
