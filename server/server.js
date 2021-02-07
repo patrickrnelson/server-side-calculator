@@ -16,7 +16,7 @@ app.listen(PORT, () => {
 });
 
 function newCalc(input) {
-  calculations.array.push(input);
+  calculations.array.unshift(input);
   return true;
 }
 
@@ -37,13 +37,13 @@ function newCalc(input) {
 // do the calculation
 // add the answer to the object
 // push the object to the array
+// that array full of calcs will be sent back to the client\
 
 app.post('/inputs', (req, res) => {
-  // inputs
+  // get the inputs
   let calculation = req.body.calcToAdd;
   // crunch the numbers
   let answer = calculations.crunchNumbers(calculation);
-  // console.log('Testing the calc', answer);
   // add the answer to the object
   calculation = {
     numOne: calculation.numOne,

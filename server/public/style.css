@@ -5,3 +5,23 @@ body {
 #inputDiv {
   display: flex;
 }
+
+#clearBtn {
+  margin-left: 5px;
+}
+
+#errorMessage {
+  height: 20px;
+  margin-top: 10px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.operatorBtn:active {
+  outline: 2px solid blue;
+}
+
+.operatorBtn:focus {
+  outline: 2px solid blue;
+}
