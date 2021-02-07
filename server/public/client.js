@@ -7,7 +7,7 @@ function onReady() {
   $(document).on('click', '#clearBtn', onClear);
   // listen for operator button click
   $(document).on('click', '.operatorBtn', onOperator);
-  // get any calculations living in the server array right away
+  // get any calculations living in the server right away
   getCalculations();
 }
 
@@ -105,12 +105,12 @@ function appendToDom(incomingArray) {
     } else if (item.operator === 'divideBtn') {
       $('#listOfResults').append(`
         <li>
-        ${item.numOne} / ${item.numTwo} = ${item.answer}
+        ${item.numOne} ÷ ${item.numTwo} = ${item.answer}
         </li>`);
     } else if (item.operator === 'multiplyBtn') {
       $('#listOfResults').append(`
         <li>
-        ${item.numOne} * ${item.numTwo} = ${item.answer}
+        ${item.numOne} × ${item.numTwo} = ${item.answer}
         </li>`);
     }
   }

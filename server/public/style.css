@@ -13,6 +13,10 @@ h2 {
   font-size: 22px;
 }
 
+.inputField {
+  width: 80px;
+}
+
 #inputDiv {
   display: flex;
 }
@@ -40,11 +44,11 @@ h2 {
 h3 {
   font-size: 34px;
   font-family: monospace;
-  margin-left: 190px;
+  margin-left: 150px;
 }
 
 li {
   font-family: monospace;
   font-size: 18px;
-  margin-left: 115px;
+  margin-left: 75px;
 }

@@ -15,12 +15,24 @@
     <h2>Calculator</h2>
     <div id="inputDiv">
       <form>
-        <input type="number" min="0" id="numOneInput" />
+        <input
+          type="number"
+          min="0"
+          class="inputField"
+          id="numOneInput"
+          placeholder="num"
+        />
         <input type="button" value="+" class="operatorBtn" id="addBtn" />
         <input type="button" value="-" class="operatorBtn" id="subtractBtn" />
-        <input type="button" value="/" class="operatorBtn" id="divideBtn" />
-        <input type="button" value="*" class="operatorBtn" id="multiplyBtn" />
-        <input type="number" min="0" id="numTwoInput" />
+        <input type="button" value="÷" class="operatorBtn" id="divideBtn" />
+        <input type="button" value="×" class="operatorBtn" id="multiplyBtn" />
+        <input
+          type="number"
+          min="0"
+          class="inputField"
+          id="numTwoInput"
+          placeholder="num"
+        />
         <button type="submit" id="submitBtn">=</button>
       </form>
       <button id="clearBtn">C</button>
