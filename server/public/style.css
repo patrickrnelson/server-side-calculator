@@ -2,6 +2,17 @@ body {
   background-color: lavender;
 }
 
+h1 {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+h2 {
+  margin-top: 40px;
+  font-family: monospace;
+  font-size: 22px;
+}
+
 #inputDiv {
   display: flex;
 }
@@ -12,7 +23,7 @@ body {
 
 #errorMessage {
   height: 20px;
-  margin-top: 10px;
+  margin-top: 5px;
   text-align: center;
   color: red;
   font-weight: bold;
@@ -24,4 +35,16 @@ body {
 
 .operatorBtn:focus {
   outline: 2px solid blue;
+}
+
+h3 {
+  font-size: 34px;
+  font-family: monospace;
+  margin-left: 190px;
+}
+
+li {
+  font-family: monospace;
+  font-size: 18px;
+  margin-left: 115px;
 }
